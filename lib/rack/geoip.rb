@@ -1,9 +1,9 @@
 require 'rack'
-require 'geoip/base'
+require 'rack/geoip/base'
 
 module Rack::GeoIP
-  autoload :Local,  'geoip/local'
-  autoload :Remote, 'geoip/remote'
+  autoload :Local,  'rack/geoip/local'
+  autoload :Remote, 'rack/geoip/remote'
   
   NOWHERE = {:country_code=>"XX", :country_code3=>"XXX", :country_name=>"XXX", :region=>"0", :city=>"XXX", :latitude=>360.0, :longitude=>360.0}
 end

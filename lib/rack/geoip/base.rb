@@ -13,7 +13,8 @@ module Rack::GeoIP
     def call(env)
       location = locate(env['REMOTE_ADDR'])
       #location = locate('200.246.224.10')
-      env['GEOIP_COUNTRY_CODE'] = location[:country_code3]
+      env['GEOIP_COUNTRY_CODE3'] = location[:country_code3]
+      env['GEOIP_COUNTRY_CODE'] = location[:country_code]
       env['GEOIP_COUNTRY'] = location[:country_name]
       env['GEOIP_REGION'] = location[:region]
       env['GEOIP_CITY'] = location[:city]

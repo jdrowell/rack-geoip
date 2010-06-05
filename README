@@ -1,0 +1,8 @@
+
+
+Make sure you have the Maxmind C library installed, and its headers.
+
+libgeoip-dev
+
+gem install geoip_city
+
